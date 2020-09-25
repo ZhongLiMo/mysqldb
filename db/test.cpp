@@ -5,7 +5,7 @@
 #include "mysqldb.hpp"
 using namespace std;
 
-char tableName[] = "test_user";
+static char tableName[] = "test_user";
 
 enum TEST_USER
 {
@@ -24,8 +24,8 @@ int main()
 	const char database[] = "test";
 	{
 		DBHandle->Connect(host, user, pswd, database);
-		typedef DATABASE::Record<TEST_USER, TEST_USER_MAX, tableName> UserRecord;
-		DATABASE::RecordTable<UserRecord> userTable;
+		typedef DBRecord<TEST_USER, TEST_USER_MAX, tableName> UserRecord;
+		DBTble<UserRecord> userTable;
 
 		//select
 		std::cout << "after select" << std::endl;
