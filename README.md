@@ -27,9 +27,9 @@ enum TEST_USER
 ##### 4、使用类模板生成需要的类
 ```
 typedef DBRecord<TEST_USER, TEST_USER_MAX, tableName> UserRecord;	//表中一行数据
-DBTble<UserRecord> userTable;										//完整的表
+DBTble<UserRecord> userTable;						//完整的表
 ```
 ##### 5、调用`DBHandle->Select(userTable, tableName)`即可加载完成整个表`userTable`
 ##### 6、更多的增删改查，可以看`test.cpp`中举的例子。
 
-如果有问题、BUG还望指出:965757151@qq.com
+如果有问题、BUG还望指出：965757151@qq.com
